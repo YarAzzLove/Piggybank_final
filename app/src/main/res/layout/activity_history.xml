@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📋 История внесений"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Сообщение при пустой истории -->
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="История внесений пуста\n\nДобавьте монеты на главном экране"
+        android:textSize="16sp"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"/>
+
+    <!-- ListView для отображения списка истории -->
+    <ListView
+        android:id="@+id/lv_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp"/>
+
+    <!-- Кнопка очистки истории -->
+    <Button
+        android:id="@+id/btn_clear_history"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="🗑️ Очистить историю"
+        android:textSize="16sp"
+        android:backgroundTint="#F44336"
+        android:textColor="@android:color/white"/>
+
+    <!-- Информация -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Всего записей: автоматически обновляется"
+        android:textSize="12sp"
+        android:textColor="#757575"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

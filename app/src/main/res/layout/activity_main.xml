@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Заголовок приложения -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Электронная Копилка"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Блок для имитации работы с копилкой -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Имитация работы с копилкой"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Кнопка для имитации подключения и получения данных -->
+        <Button
+            android:id="@+id/btn_sync"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="📡 Синхронизировать с копилкой"
+            android:textSize="16sp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Разделитель -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Блок добавления монет фиксированных номиналов -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить монету (имитация):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Первая строка кнопок номиналов -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_coin_05"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="50 коп"
+                android:textSize="14sp"
+                android:backgroundTint="#FF9800"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btn_coin_1"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="1 руб"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btn_coin_2"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="2 руб"
+                android:textSize="14sp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Вторая строка кнопок номиналов -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="25dp">
+
+            <Button
+                android:id="@+id/btn_coin_5"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="5 руб"
+                android:textSize="14sp"
+                android:backgroundTint="#9C27B0"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btn_coin_10"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="10 руб"
+                android:textSize="14sp"
+                android:backgroundTint="#F44336"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Блок с общей суммой -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#E8F5E9"
+            android:padding="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💰 Общая сумма: "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"/>
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00 руб"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"/>
+
+        </LinearLayout>
+
+        <!-- Блок навигации по приложению -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Меню приложения"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Кнопка для перехода на экран истории -->
+        <Button
+            android:id="@+id/btn_history"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="📋 История внесений"
+            android:textSize="16sp"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Кнопка для перехода на экран статистики -->
+        <Button
+            android:id="@+id/btn_stats"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="📊 Статистика"
+            android:textSize="16sp"
+            android:backgroundTint="#9C27B0"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Кнопка для перехода на экран целей (заглушка) -->
+        <Button
+            android:id="@+id/btn_goals"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="🎯 Цели накопления"
+            android:textSize="16sp"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Блок с информацией -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ℹ️ Примечание:"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#757575"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Приложение работает в режиме имитации.\nРеальная синхронизация с копилкой будет добавлена позже.\n\nНоминалы монет: 0.5, 1, 2, 5, 10 руб"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:lineSpacingExtra="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

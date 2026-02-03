@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 Статистика накоплений"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#9C27B0"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- Блок с общей статистикой -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F3E5F5"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📈 Общая статистика"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#7B1FA2"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_stats_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Загрузка статистики..."
+                android:textSize="16sp"
+                android:textColor="#4A148C"
+                android:lineSpacingExtra="6dp"/>
+
+        </LinearLayout>
+
+        <!-- Блок с распределением по номиналам -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E8EAF6"
+            android:padding="20dp"
+            android:layout_marginBottom="30dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔢 Распределение по номиналам"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#303F9F"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- Здесь будет отображаться распределение -->
+            <TextView
+                android:id="@+id/tv_distribution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Данные загружаются..."
+                android:textSize="14sp"
+                android:textColor="#1A237E"
+                android:lineSpacingExtra="4dp"/>
+
+        </LinearLayout>
+
+        <!-- График роста (заглушка) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E0F7FA"
+            android:padding="20dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📈 График роста накоплений"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#006064"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="В дальнейшем здесь будет отображаться:\n• График роста суммы по дням\n• Круговая диаграмма распределения"
+                android:textSize="14sp"
+                android:textColor="#004D40"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Графики временно недоступны"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:textColor="#004D40"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <!-- Информация -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ℹ️ Все данные рассчитываются на основе истории внесений\nНоминалы монет: 0.5, 1, 2, 5, 10 руб"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+</ScrollView>
